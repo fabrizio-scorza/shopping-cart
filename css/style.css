@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 :root {
   --salmon-orange: #fa7373;
   --violet: #5d51dc;
@@ -20,38 +21,46 @@ img {
   width: 100%;
 }
 /* LAYOUT */
-.container-wrapper{
+
+body{
+  font-family: "Open Sans", sans-serif;
+}
+.container-wrapper {
   width: 100%;
   height: 100vh;
   padding: var(--spacing-y-md) var(--spacing-x-lg);
   background-color: var(--gray);
-
 }
-#app{
-  
+#app {
   height: 100%;
   background-color: white;
 }
-.flex{
+.flex {
   display: flex;
   flex-wrap: wrap;
 }
 
-.main-page{
+.main-page {
   flex-grow: 1;
   padding: var(--spacing-y-lg) var(--spacing-x-lg);
-
 }
-.aside-page{
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #000;
+  padding-bottom: 40px;
+}
+.header h2 {
+  font-size: 26px;
+}
+
+.aside-page {
   width: 390px;
   flex-shrink: 0;
   padding: var(--spacing-y-lg) var(--spacing-x-lg);
   background-color: var(--light-gray);
 }
-
-
-
-
 
 /* DEBUG */
 /* 
