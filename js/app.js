@@ -51,15 +51,15 @@ function render (items) {
   //recuperiamo dal dom elemento table
   const tableElement = document.querySelector(".tabella");
   //console.log(tableElement);
-
+  
   //ciclo for in cui cicliamo item e lo aggiungiamo alla tabella in html
   for (let i = 0; i < items.length; i++) {
     tableElement.innerHTML += `
     <tr>
-      <td class="product-cell">
-        <img src="./img/burger.png" alt="">
+      <td class="product-cell">                        
+        <img src="./img/${items[i].product.img}" alt="">
         <div class="product-cell-name-wrapper">
-            <p>Burger
+            <p>${items[i].product.name}
             </p>
             <a href="#">Remove</a>
 
@@ -67,12 +67,21 @@ function render (items) {
       </td>
       <td>
         <a href="#" class="quantity-button">-</a>
-        <input type="text" id="quantity-counter" disabled value="1">
+        <input type="text" id="quantity-counter" disabled value="${items[i].quantity}">
         <a href="#" class="quantity-button">+</a>
       </td>
-      <td>8.50 €</td>
-      <td>8.50 €</td>
+      <td>${items[i].product.price.toFixed(2)}€</td>
+      <td>${totalPrice (items[i].product.price, items[i].quantity)}€</td>
     </tr>
     `
+    // console.log(items[i].product.img)
   }
+  
 }
+
+function totalPrice(price, quantity){
+  const molt = (price * quantity).toFixed(2); 
+  return molt
+}
+
+console.log(totalPrice(5, 10))
