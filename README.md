@@ -14,3 +14,6 @@ Osservando il layout ragioniamo su come impostare i nostri dati per mostrarli al
 
 Impostiamo gli header (titoli e linea di separazione) delle due sezioni. In particolare:
 il numero di items mostrati nella sezione di sinistra deve essere dinamico (se sto gestendo 10 prodotti deve apparire la scritta “10 items”)
+
+## Milestone 5
+Impostiamo l’HTML e il CSS della tabella dei prodotti. Creiamo l’intestazione della tabella e una riga di esempio, stampando un’immagine e dei dati statici. Lasciamo vuota per ora la colonna QUANTITY.
