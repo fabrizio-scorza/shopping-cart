@@ -36,12 +36,30 @@ const cartItems = [
 const qItems = document.getElementById("q-items");
 qItems.textContent = cartItems.length + " items";
 
-
-
 //evochiamo la funzione per creare le righe della tabella
 render(cartItems);
 
+const addItems = document.querySelectorAll(".plus");
+console.log(addItems)
 
+const minusItems = document.querySelectorAll(".minus");
+console.log(minusItems)
+
+for(let i = 0; i < addItems.length; i++){
+  const addItem = addItems[i];
+
+  addItem.addEventListener("click", function(){
+    console.log(cartItems[i].product.name)
+  })
+}
+
+for(let i = 0; i < minusItems.length; i++){
+  const minusItem = minusItems[i];
+
+  minusItem.addEventListener("click", function(){
+    console.log(cartItems[i].product.name)
+  })
+}
 //
 //FUNZIONI
 //
@@ -66,9 +84,9 @@ function render (items) {
           </div>
       </td>
       <td>
-        <a href="#" class="quantity-button">-</a>
+        <a href="#" class="quantity-button minus">-</a>
         <input type="text" id="quantity-counter" disabled value="${items[i].quantity}">
-        <a href="#" class="quantity-button">+</a>
+        <a href="#" class="quantity-button plus">+</a>
       </td>
       <td>${items[i].product.price.toFixed(2)}€</td>
       <td>${totalPrice (items[i].product.price, items[i].quantity)}€</td>
