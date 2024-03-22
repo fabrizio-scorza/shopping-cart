@@ -19,3 +19,42 @@
 img {
   width: 100%;
 }
+/* LAYOUT */
+.container-wrapper{
+  width: 100%;
+  height: 100vh;
+  padding: var(--spacing-y-md) var(--spacing-x-lg);
+  background-color: var(--gray);
+
+}
+#app{
+  
+  height: 100%;
+  background-color: white;
+}
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-page{
+  flex-grow: 1;
+  padding: var(--spacing-y-lg) var(--spacing-x-lg);
+
+}
+.aside-page{
+  width: 390px;
+  flex-shrink: 0;
+  padding: var(--spacing-y-lg) var(--spacing-x-lg);
+  background-color: var(--light-gray);
+}
+
+
+
+
+
+/* DEBUG */
+/* 
+.debug .main-page, .aside-page{
+   border: 1px solid black;
+} */
