@@ -35,3 +35,44 @@ const cartItems = [
 
 const qItems = document.getElementById("q-items");
 qItems.textContent = cartItems.length + " items";
+
+
+
+//evochiamo la funzione per creare le righe della tabella
+render(cartItems);
+
+
+//
+//FUNZIONI
+//
+
+function render (items) {
+
+  //recuperiamo dal dom elemento table
+  const tableElement = document.querySelector(".tabella");
+  //console.log(tableElement);
+
+  //ciclo for in cui cicliamo item e lo aggiungiamo alla tabella in html
+  for (let i = 0; i < items.length; i++) {
+    tableElement.innerHTML += `
+    <tr>
+      <td class="product-cell">
+        <img src="./img/burger.png" alt="">
+        <div class="product-cell-name-wrapper">
+            <p>Burger
+            </p>
+            <a href="#">Remove</a>
+
+          </div>
+      </td>
+      <td>
+        <a href="#" class="quantity-button">-</a>
+        <input type="text" id="quantity-counter" disabled value="1">
+        <a href="#" class="quantity-button">+</a>
+      </td>
+      <td>8.50 €</td>
+      <td>8.50 €</td>
+    </tr>
+    `
+  }
+}

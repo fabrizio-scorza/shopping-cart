@@ -20,3 +20,6 @@ Impostiamo l’HTML e il CSS della tabella dei prodotti. Creiamo l’intestazion
 
 ## Milestone 6
 Lavoriamo alla colonna QUANTITY. Facciamo in modo che nella colonna sia presente un input numerico disabilitato, con a fianco i pulsanti - e + per incrementare la quantità del prodotto. Per ora ignoriamo la parte JS.
+
+## Milestone 7
+Iniziamo a rendere le cose dinamiche. Creiamo una funzione render e al suo interno scriviamo il codice necessario per far sì che appaia una riga nella tabella per ogni prodotto. Manteniamo ancora i dati statici, assicuriamoci solo che se abbiamo 5 prodotti appaiono 5 righe nella tabella, tutte uguali.
