@@ -106,6 +106,17 @@ main tbody img {
   max-width: 80px;
 }
 
+/* Quantity */
+
+#quantity-counter {
+  width: 40px;
+  aspect-ratio: 1/1;
+  pointer-events: none;
+  text-align: center;
+  margin: 0 10px;
+}
+
+
 /* DEBUG */
 /* 
 .debug .main-page, .aside-page{
