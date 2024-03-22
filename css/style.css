@@ -17,6 +17,11 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
 img {
   width: 100%;
 }
@@ -34,6 +39,7 @@ body{
 #app {
   height: 100%;
   background-color: white;
+
 }
 .flex {
   display: flex;
@@ -62,10 +68,42 @@ body{
   background-color: var(--light-gray);
 }
 
+/* Table */
+main table {
+  padding: 35px 0;
+  width: 100%;
+}
+
+thead tr > *:not(:first-child), tbody tr > *:not(:first-child)  {
+  padding: 0 40px;
+}
+
+td {
+  text-align: center;
+}
+
+.product-cell-name-wrapper {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.product-cell-name-wrapper a {
+  color: var(--salmon-orange);
+}
+
+.product-header {
+  text-align: left;
+}
+
 .product-cell {
   display: flex;
   flex-direction: row;
   width: 50%;
+  align-items: center;
+}
+
+main tbody img {
+  max-width: 80px;
 }
 
 /* DEBUG */
